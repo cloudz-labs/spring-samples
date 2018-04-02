@@ -1,0 +1,30 @@
+2018:04:02 16:42:32.967 INFO  --- [main] com.skcc.mybatis.sample.Application : Starting Application on Jaehoonui-MacBook-Pro.local with PID 23039 (/Volumes/1000jaeh/github/cloudz-labs/workspace/spring-samples/mybatis-sample/target/classes started by 1000jaeh in /Volumes/1000jaeh/github/cloudz-labs/workspace/spring-samples/mybatis-sample) 
+2018:04:02 16:42:32.991 DEBUG --- [main] com.skcc.mybatis.sample.Application : Running with Spring Boot v1.4.5.RELEASE, Spring v4.3.7.RELEASE 
+2018:04:02 16:42:32.992 INFO  --- [main] com.skcc.mybatis.sample.Application : No active profile set, falling back to default profiles: default 
+2018:04:02 16:42:33.025 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@587e5365: startup date [Mon Apr 02 16:42:33 KST 2018]; root of context hierarchy 
+2018:04:02 16:42:33.487 WARN  --- [main] o.m.s.mapper.ClassPathMapperScanner : No MyBatis mapper was found in '[com.skcc.mybatis.sample]' package. Please check your configuration. 
+2018:04:02 16:42:33.703 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$81d37fe0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2018:04:02 16:42:34.024 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:04:02 16:42:34.033 INFO  --- [main] o.a.catalina.core.StandardService : Starting service Tomcat 
+2018:04:02 16:42:34.034 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.11 
+2018:04:02 16:42:34.094 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:04:02 16:42:34.095 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1070 ms 
+2018:04:02 16:42:34.227 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:04:02 16:42:34.231 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:04:02 16:42:34.232 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:04:02 16:42:34.232 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:04:02 16:42:34.233 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:04:02 16:42:34.705 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@587e5365: startup date [Mon Apr 02 16:42:33 KST 2018]; root of context hierarchy 
+2018:04:02 16:42:34.742 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mybatis]}" onto public java.util.List<com.skcc.mybatis.sample.domain.User> com.skcc.mybatis.sample.controller.MybatisController.listUser() 
+2018:04:02 16:42:34.744 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add]}" onto public java.util.List<com.skcc.mybatis.sample.domain.User> com.skcc.mybatis.sample.controller.MybatisController.addUser(java.lang.String,java.lang.String,java.lang.String) 
+2018:04:02 16:42:34.746 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:04:02 16:42:34.747 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:04:02 16:42:34.769 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:04:02 16:42:34.769 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:04:02 16:42:34.795 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:04:02 16:42:34.955 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:04:02 16:42:35.011 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:04:02 16:42:35.015 INFO  --- [main] com.skcc.mybatis.sample.Application : Started Application in 2.412 seconds (JVM running for 2.905) 
+2018:04:02 16:42:37.423 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:04:02 16:42:37.423 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@587e5365: startup date [Mon Apr 02 16:42:33 KST 2018]; root of context hierarchy 
+2018:04:02 16:42:37.425 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 

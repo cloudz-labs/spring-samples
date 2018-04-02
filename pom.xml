@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>io.ghama</groupId>
-	<artifactId>cna-samples</artifactId>
+	<groupId>com.skcc</groupId>
+	<artifactId>spring-samples</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -12,14 +12,17 @@
 	<description>Demo project for Cloud Native Application</description>
 	
 	<modules>
+		<module>batch-sample</module>
 		<module>jpa-sample</module>
 		<module>mongodb-sample</module>
 		<module>mybatis-sample</module>
-		<module>object-storage-sample</module>
 		<module>object-storage-bluemixs3-sample</module>
 		<module>object-storage-cloudz-sample</module>
+		<module>object-storage-sample</module>
 		<module>rabbitmq-sample</module>
+		<module>redis-data-sample</module>
 		<module>redis-sample</module>
+		<module>security-sample</module>
 	</modules>
 		
 	<properties>

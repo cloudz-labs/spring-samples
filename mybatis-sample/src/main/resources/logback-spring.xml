@@ -24,18 +24,18 @@
 			<appender-ref ref="dailyRollingFileAppender" />
 		</root>
 
-		<logger name="io.ghama.mybatis.sample" level="DEBUG" />
+		<logger name="com.skcc.mybatis.sample" level="DEBUG" />
 	</springProfile>
 	
 	<springProfile name="dev">
-		<logger name="io.ghama.mybatis.sample" level="INFO" />
+		<logger name="com.skcc.mybatis.sample" level="INFO" />
 	</springProfile>
 	
 	<springProfile name="stg">
-		<logger name="io.ghama.mybatis.sample" level="INFO" />
+		<logger name="com.skcc.mybatis.sample" level="INFO" />
 	</springProfile>
 	
 	<springProfile name="prod">
-		<logger name="io.ghama.mybatis.sample" level="INFO" />
+		<logger name="com.skcc.mybatis.sample" level="INFO" />
 	</springProfile>
 </configuration>
