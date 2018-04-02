@@ -1,0 +1,4 @@
+# config for service
+services:
+  rabbitmq:
+    name: cna-samples-rabbitmq

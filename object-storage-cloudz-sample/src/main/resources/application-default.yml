@@ -1,0 +1,6 @@
+services:
+  objectstorage:
+    username: IBMOS1254321-3:IBM1254321
+    password: 9cb9ae2cfc206a144a2729f3bbdfcfdf33e939122ea9ffc9b1037affa8974070
+    auth_url: https://seo01.objectstorage.softlayer.net/auth/v1.0/
+#   auth_url: https://seo01.objectstorage.service.networklayer.com/auth/v1.0/

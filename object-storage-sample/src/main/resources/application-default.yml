@@ -1,0 +1,4 @@
+# config for file
+file:
+  save:
+    dir: C:\temp\cna-sample

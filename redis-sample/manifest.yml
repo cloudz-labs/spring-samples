@@ -1,0 +1,12 @@
+---
+applications:
+- name: redis-sample
+  memory: 1G
+  instances: 1
+  path: ./target/redis-sample-0.0.1-SNAPSHOT.jar
+  random-route: true
+  buildpack: java_buildpack
+  services:
+    - cna-samples-redis
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

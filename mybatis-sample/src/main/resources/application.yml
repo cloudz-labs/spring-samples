@@ -1,0 +1,2 @@
+mybatis:
+  config: classpath:META-INF/mybatis/mybatis-config.xml

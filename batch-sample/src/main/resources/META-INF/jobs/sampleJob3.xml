@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:batch="http://www.springframework.org/schema/batch" 
+		xsi:schemaLocation="http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd  
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" >
+
+	<batch:job id="sampleJob3">
+		<batch:step id="sampleJob3.step1">
+			<batch:tasklet transaction-manager="transactionManager">
+				<batch:chunk reader="sampleJob3.itemReader" writer="sampleJob3.itemWriter" commit-interval="1000" />
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+
+	<bean id="sampleJob3.itemReader" class="org.springframework.batch.item.database.JdbcCursorItemReader">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="fetchSize" value="1000"/>
+		<property name="sql" value="SELECT id, name, age FROM batch_test"/>
+		<property name="maxRows" value="10000"/>
+		<property name="verifyCursorPosition" value="false"/>
+		<property name="rowMapper">
+			<bean class="org.springframework.jdbc.core.BeanPropertyRowMapper">
+				<property name="mappedClass" value="com.dtlabs.person.Person" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="sampleJob3.itemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
+		<property name="resource" value="file:./csv/person_new2.csv" />
+		<property name="lineAggregator">
+			<bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+				<property name="fieldExtractor">
+					<bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+						<property name="names" value="id, name, age" />
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

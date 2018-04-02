@@ -1,0 +1,8 @@
+# config for service
+services:
+  objectstorage:
+    access_key: ${vcap.services.cna-samples-objectstorage-bluemixs3-service.credentials.access_key}
+    secret_key: ${vcap.services.cna-samples-objectstorage-bluemixs3-service.credentials.secret_key}
+    auth_url: https://${vcap.services.cna-samples-objectstorage-bluemixs3-service.credentials.endpoint}
+    bucket_name: bdh-test-bucket
+    

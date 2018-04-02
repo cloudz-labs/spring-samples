@@ -1,0 +1,6 @@
+# config for service
+services:
+  objectstorage:
+    username: ${vcap.services.cna-samples-objectstorage-cloudz.credentials.username}
+    password: ${vcap.services.cna-samples-objectstorage-cloudz.credentials.password}
+    auth_url: ${vcap.services.cna-samples-objectstorage-cloudz.credentials.auth_url}

@@ -1,0 +1,6 @@
+services:
+  objectstorage:
+    access_key: UdHBlTEv1JgD0jbdnjJp
+    secret_key: XQhPNv6Wrc7tm6jy8gaFJGc0qDo22zS0X7dAR03G
+    auth_url: https://s3-api.us-geo.objectstorage.softlayer.net
+    bucket_name: bdh-test-bucket

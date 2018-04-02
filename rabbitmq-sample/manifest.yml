@@ -1,0 +1,12 @@
+---
+applications:
+- name: rabbitmq-sample
+  memory: 1G
+  instances: 1
+  path: ./target/rabbitmq-sample-0.0.1-SNAPSHOT.jar
+  random-route: true
+  buildpack: java_buildpack
+  services:
+    - cna-samples-rabbitmq
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

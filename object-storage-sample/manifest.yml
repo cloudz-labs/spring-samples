@@ -1,0 +1,13 @@
+---
+applications:
+- name: object-storage-sample
+  memory: 1G
+  instances: 1
+  path: ./target/object-storage-sample-0.0.1-SNAPSHOT.jar
+  random-route: true
+  buildpack: java_buildpack
+  services:
+    - cna-samples-objectstorage
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+    

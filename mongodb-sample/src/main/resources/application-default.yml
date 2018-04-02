@@ -1,0 +1,9 @@
+# config for dataSource
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: 50f922e6-517e-47d2-8e1f-a525ad8a985e
+      password: 2da7ebe8-e3b5-4768-9e84-3b9de593dd72
+      database: e7561404-df90-43c8-a24d-abb1823e8ea9

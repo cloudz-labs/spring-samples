@@ -1,0 +1,4 @@
+# config for service
+services:
+  mongodb:
+    name: cna-samples-mongodb

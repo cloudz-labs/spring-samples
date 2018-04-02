@@ -1,0 +1,9 @@
+# config for dataSource
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:63306/op_d970d973_0345_4f43_b408_77ce5e2c4a0c
+    username: ff6c79e19b05208d
+    password: ff6c79e19b05208d
+    driver-class-name: org.mariadb.jdbc.Driver
+    initial-size: 1
+    maximum-pool-size: 1

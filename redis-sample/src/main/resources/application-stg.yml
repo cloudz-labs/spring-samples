@@ -1,0 +1,4 @@
+# config for service
+services:
+  redis: 
+    name: cna-samples-redis

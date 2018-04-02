@@ -1,0 +1,7 @@
+# config for service
+services:
+  datasource: 
+    name: cna-samples-mariadb
+    initial-size: 1
+    maximum-pool-size: 2
+    max-wait-time: 3000

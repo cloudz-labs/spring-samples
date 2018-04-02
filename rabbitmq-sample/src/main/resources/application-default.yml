@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 55671
+    username: ded525cf-a216-4d51-8dbd-679d73729a91
+    password: i40a08c44585bhnrf3e4hjarjo
+    virtual-host: 9bb6a80a-ff84-40ca-bc58-e0f0b212e7a1
+    ssl:
+      enabled: false
+      algorithm: TLS

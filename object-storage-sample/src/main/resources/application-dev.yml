@@ -1,0 +1,8 @@
+# config for service
+services:
+  objectstorage:
+    username: ${vcap.services.cna-samples-objectstorage.credentials.username}
+    password: ${vcap.services.cna-samples-objectstorage.credentials.password}
+    auth_url: ${vcap.services.cna-samples-objectstorage.credentials.auth_url}
+    tenantid: ${vcap.services.cna-samples-objectstorage.credentials.tenantId}
+    tenantname: ${vcap.services.cna-samples-objectstorage.credentials.tenantName}
