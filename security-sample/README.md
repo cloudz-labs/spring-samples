@@ -23,17 +23,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.skcc</groupId>
-	<artifactId>cna-security-sample</artifactId>
+	<artifactId>security-sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>cna-security-sample</name>
+	<name>security-sample</name>
 	<description>Demo project for Spring Security</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.5.RELEASE</version>
+		<version>2.0.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -64,12 +64,6 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -93,7 +87,7 @@
 `@RestController`를 사용하여 Log-in한 사용자 정보를 반환하는 API를 생성합니다.
 사용자 정보는 Spring Security의 Filter를 통해서, SecurityContext에 저장되어 있으며, SecurityContextHolder를 통해서 접근 가능합니다. (단 Anonymous 사용자의 경우, Log-in전에는 Security Context에 저장된 정보가 없으므로, 그 값은 Null이 될 수 있습니다.)
 
-* `GET /anonymous`: 누구나 접근 가능한 URL
+* `GET /anonymous`: Anonymous 사용자가 접근 가능한 URL
 * `GET /admin`: 시스템 사용자 중 관리자 권한을 갖고 있는 사용자만 접근할 수 있는 URL
 * `GET /user`: 시스템 사용자만 접근할 수 있는 URL
 
@@ -131,6 +125,7 @@ Security 설정을 위한 Class를 생성하고, `WebSecurityConfigurerAdapter`�
 
 ```java
 @Configuration
+@EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 }
 ```
@@ -169,11 +164,10 @@ protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 ## Security 권한 적용을 위한 설정
 
 Security Configuration 클래스에 Spring Security의 설정을 Annotation으로 적용하기 위해 `@EnableGlobalMethodSecurity`를 추가합니다.(Pre/PreAuthorize사용을 위해 prePostEnabled=true로 설정합니다.)
-또한, 기본 Spring Security의 설정들을 유지한 상태에서, URL 접근 규칙만 변경하기 위해서 `@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)`를 추가합니다.
 
 ```java
 @Configuration
-@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+@EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled=true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	...
@@ -202,7 +196,7 @@ public Principal helloUser(Principal principal) {
 ## Spring Security Application 실행
 
 Application을 실행합니다.
-`/anonymous`는 인증/권한 처리 없이 모든 사용자가 접근 가능합니다. 인증과정을 거치지 않았다면, `anonymousUser`를 확인할 수 있습니다. 반대로 인증과정이 통과되었다면, 인증처리된 사용자 정보를 확인할 수 있습니다.
+`/anonymous`는 인증/권한 처리를 통과하지 않은 사용자가 접근 가능합니다. 인증과정을 거치지 않았다면, `anonymousUser`를 확인할 수 있습니다.
 
 `/admin`는 ADMIN 권한을 갖고 있는 사용자에 한해서 접근 가능하며, 인증처리를 통과한 사용자 정보를 확인할 수 있습니다. 단 User 권한을 갖고 있는 사용자가 접근할 경우, 접근 제한 에러가 나타납니다.
 
