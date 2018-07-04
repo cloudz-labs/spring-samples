@@ -18,7 +18,7 @@ public class Controller {
 	@RequestMapping("/anonymous")
 	public String helloAnonymous() {
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		
+
 		if (principal instanceof UserDetails) {
 			return ((UserDetails) principal).getUsername();
 		} else {

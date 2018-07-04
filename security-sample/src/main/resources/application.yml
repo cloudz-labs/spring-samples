@@ -1,16 +1,7 @@
-# Spring Security 기본 설정 사용안함.
-security:
-  basic:
-    enabled: false
-  
 spring:
   datasource:
     url: jdbc:h2:mem:testdb;
     username: sa
     password: 
     driver-class-name: org.h2.Driver
-  redis:
-    host: 127.0.0.1
-    port: 6379
-  session:
-    store-type: redis
+    initialization-mode: always
